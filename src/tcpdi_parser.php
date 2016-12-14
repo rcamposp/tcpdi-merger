@@ -50,6 +50,8 @@
 // include class for decoding filters
 #require_once(dirname(__FILE__).'/include/tcpdf_filters.php');
 
+namespace rcamposp\tcpdi_merger;
+
 if (!defined ('PDF_TYPE_NULL'))
     define ('PDF_TYPE_NULL', 0);
 if (!defined ('PDF_TYPE_NUMERIC'))
@@ -190,7 +192,7 @@ class tcpdi_parser {
         // get length
         $pdflen = strlen($this->pdfdata);
         // initialize class for decoding filters
-        $this->FilterDecoders = new TCPDF_FILTERS();
+        $this->FilterDecoders = new \TCPDF_FILTERS();
         // get xref and trailer data
         $this->xref = $this->getXrefData();
         $this->findObjectOffsets();

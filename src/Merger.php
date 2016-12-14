@@ -1,6 +1,8 @@
 <?php
 
-require_once("src/MyTCPDI.php");
+namespace rcamposp\tcpdi_merger;
+
+#require_once("src/MyTCPDI.php");
 
 class Merger{
     private $tcpdi;

@@ -1,6 +1,9 @@
 <?php
 
-    require_once("src/Merger.php");
+    require 'vendor/autoload.php';
+
+    use rcamposp\tcpdi_merger\MyTCPDI;
+    use rcamposp\tcpdi_merger\Merger;            
 
     $m = new Merger(true);
     $m->addFromFile("example/A.pdf");

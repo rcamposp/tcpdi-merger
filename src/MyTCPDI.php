@@ -1,7 +1,8 @@
 <?php
-require 'vendor/autoload.php';
+
+namespace rcamposp\tcpdi_merger;
 // Include the main TCPDF library and TCPDI.
-require_once("src/tcpdi.php");
+use rcamposp\tcpdi_merger\tcpdi;  
 
 #Intended to extend stuff from the base TCPDF class
 class MyTCPDI extends TCPDI{
