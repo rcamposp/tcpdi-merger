@@ -1,8 +1,8 @@
 {
-    "name": "rcamposp/tcpdi",
+    "name": "rcamposp/tcpdi-merger",
     "description": "PDF Importer that supports PDF versions 1.6+. Based on: https://github.com/pauln/tcpdi",
     "keywords": ["pdf", "merge", "concatenate"],
-    "homepage": "https://github.com/rcamposp/tcpdi",
+    "homepage": "https://github.com/rcamposp/tcpdi-merger",
     "type": "library",
     "license": "WTFPL",
     "authors": [
