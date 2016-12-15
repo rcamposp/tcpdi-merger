@@ -131,4 +131,6 @@ class Merger{
     }
 }
 
+class Exception extends \Exception{}
+
 ?>
