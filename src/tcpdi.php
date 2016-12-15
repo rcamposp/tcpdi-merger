@@ -735,6 +735,7 @@ class TCPDI extends FPDF_TPL {
      * Removes cylced references and closes the file handles of the parser objects
      */
     function cleanUp() {
+        if(empty($this->parsers)){return false;}
     	foreach ($this->parsers as $k => $_){
         	$this->parsers[$k]->cleanUp();
         	$this->parsers[$k] = null;

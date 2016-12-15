@@ -9,7 +9,9 @@ class Merger{
 
     private $files = array();
 
-    private $output = "";    
+    private $output = "";   
+
+    private $tempDir;
 
     public function __construct($showPagination = false){
         $this->tcpdi = new MyTCPDI($showPagination); //Default page format params        
@@ -71,24 +73,62 @@ class Merger{
             }
             $this->files = array();            
             $this->output = $output;            
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             throw new Exception("FPDI: '{$e->getMessage()}' in '$fname'", 0, $e);
         }
     }
 
+    public function getRawOutput(){
+        return $this->output;
+    }
+
     public function download($filename = 'document.pdf')
     {
-        return new Response($this->output(), 200, array(
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' =>  'attachment; filename="'.$filename.'"'
-        ));
+        
+        header("Content-Type: application/pdf");
+        header('Content-Length: '.strlen($this->output));            
+        header('Content-disposition: attachment; filename="'.$filename.'"');
+        echo $this->output;
+        
     }
 
     public function save($path = 'example/document.pdf')
     {
         file_put_contents($path, $this->output);
     }    
+
+    /**
+     * Create temporary file and return name
+     *
+     * @return string
+     */
+    public function getTempFname()
+    {
+        return tempnam($this->getTempDir(), "pdfmerge");
+    }
+    /**
+     * Get directory path for temporary files
+     *
+     * Set path using setTempDir(), defaults to sys_get_temp_dir().
+     *
+     * @return string
+     */
+    public function getTempDir()
+    {
+        return $this->tempDir ?: sys_get_temp_dir();
+    }
 	
+
+    /**
+     * Set directory path for temporary files
+     *
+     * @param  string $dirname
+     * @return void
+     */
+    public function setTempDir($dirname)
+    {
+        $this->tempDir = $dirname;
+    }
 }
 
 ?>
