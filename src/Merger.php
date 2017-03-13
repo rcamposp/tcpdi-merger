@@ -58,7 +58,7 @@ class Merger{
                     $template = $tcpdi->importPage($page);
                     $size = $tcpdi->getTemplateSize($template);
                     $orientation = ($size['w'] > $size['h']) ? 'L' : 'P';
-                    $tcpdi->AddPage($orientation);                    
+                    $tcpdi->AddPage($orientation, array($size['w'], $size['h']));                    
                     $tcpdi->useTemplate($template);
                 }
             }
