@@ -20,12 +20,12 @@
 
 // Dummy shim to allow unmodified use of fpdf_tpl
 
-namespace rcamposp\tcpdi_merger;
+namespace shihjay2\tcpdi_merger;
 
-use rcamposp\tcpdi_merger\fpdf_tpl;  
-use rcamposp\tcpdi_merger\tcpdi_parser;
+use shihjay2\tcpdi_merger\fpdf_tpl;
+use shihjay2\tcpdi_merger\tcpdi_parser;
 
-class FPDF extends \TCPDF {}  
+class FPDF extends \TCPDF {}
 
 class TCPDI extends FPDF_TPL {
     /**
