@@ -1,22 +1,24 @@
 <?php
 
-namespace rcamposp\tcpdi_merger;
+namespace pdf_merger\tcpdi_merger;
 // Include the main TCPDF library and TCPDI.
-use rcamposp\tcpdi_merger\tcpdi;  
+use pdf_merger\tcpdi_merger\tcpdi;
 
 #Intended to extend stuff from the base TCPDF class
 class MyTCPDI extends TCPDI{
     protected $header_line_color = array(255,255,255);
 
     protected $showPagination;
-    
-    public function __construct($showPagination = false){        
+
+    public function __construct($showPagination = false)
+    {
         $this->showPagination = $showPagination;
         parent::__construct();
     }
 
     // Page footer
-	public function Footer() {
+	public function Footer()
+    {
         if($this->showPagination){
             // Position at 15 mm from bottom
             $this->SetY(-15);

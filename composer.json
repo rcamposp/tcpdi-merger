@@ -1,11 +1,16 @@
 {
-    "name": "rcamposp/tcpdi-merger",
-    "description": "PDF Importer that supports PDF versions 1.6+. Based on: https://github.com/pauln/tcpdi",
+    "name": "pdf-merger/tcpdi-merger",
+    "description": "PDF Importer that supports PDF versions 1.6+.",
     "keywords": ["pdf", "merge", "concatenate"],
-    "homepage": "https://github.com/rcamposp/tcpdi-merger",
+    "homepage": "https://github.com/mateuszkargul/tcpdi-merger",
     "type": "library",
-    "license": "WTFPL",
+    "license": "MIT",
     "authors": [
+        {
+			"name" : "Michael Chen",
+			"role" : "Developer",
+			"homepage" : "https://github.com/shihjay2/"
+		},
         {
             "name": "Ricardo Campos",
             "email": "ricardocamposp@gmail.com"
@@ -13,11 +18,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "rcamposp\\tcpdi_merger\\": "src/"
+            "pdf_merger\\tcpdi_merger\\": "src/"
         }
     },
     "require": {
-        "php": ">=5.3.0",
-        "tecnickcom/tcpdf": "^6.2"        
+        "php": ">=7.0",
+        "tecnickcom/tcpdf": "^6.2"
     }
 }

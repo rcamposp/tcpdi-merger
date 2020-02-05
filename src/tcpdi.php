@@ -20,14 +20,14 @@
 
 // Dummy shim to allow unmodified use of fpdf_tpl
 
-namespace rcamposp\tcpdi_merger;
+namespace pdf_merger\tcpdi_merger;
 
-use rcamposp\tcpdi_merger\fpdf_tpl;  
-use rcamposp\tcpdi_merger\tcpdi_parser;
+use pdf_merger\tcpdi_merger\fpdf_tpl;
+use pdf_merger\tcpdi_merger\tcpdi_parser;
 
-class FPDF extends \TCPDF {}  
+class FPDF extends \TCPDF {}
 
-class TCPDI extends FPDF_TPL {
+class tcpdi extends FPDF_TPL {
     /**
      * Actual filename
      * @var string
@@ -627,7 +627,7 @@ class TCPDI extends FPDF_TPL {
 
                 reset ($value[1]);
 
-                while (list($k, $v) = each($value[1])) {
+                foreach ($value[1] as $k => $v) {
                     $this->_straightOut($k . ' ');
                     $this->pdf_write_value($v);
                 }
