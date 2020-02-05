@@ -19,7 +19,7 @@
 
 namespace rcamposp\tcpdi_merger;
 
-class FPDF_TPL extends FPDF {
+class fpdf_tpl extends FPDF {
     /**
      * Array of Tpl-Data
      * @var array

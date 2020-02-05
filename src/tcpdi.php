@@ -25,9 +25,9 @@ namespace rcamposp\tcpdi_merger;
 use rcamposp\tcpdi_merger\fpdf_tpl;  
 use rcamposp\tcpdi_merger\tcpdi_parser;
 
-class FPDF extends \TCPDF {}  
+class FPDF extends \TCPDF {}
 
-class TCPDI extends FPDF_TPL {
+class tcpdi extends FPDF_TPL {
     /**
      * Actual filename
      * @var string
