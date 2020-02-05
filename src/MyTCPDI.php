@@ -1,8 +1,8 @@
 <?php
 
-namespace shihjay2\tcpdi_merger;
+namespace pdf_merger\tcpdi_merger;
 // Include the main TCPDF library and TCPDI.
-use shihjay2\tcpdi_merger\tcpdi;
+use pdf_merger\tcpdi_merger\tcpdi;
 
 #Intended to extend stuff from the base TCPDF class
 class MyTCPDI extends TCPDI{

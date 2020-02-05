@@ -1,10 +1,12 @@
 <?php
 
-namespace shihjay2\tcpdi_merger;
+namespace pdf_merger\tcpdi_merger;
 
-#require_once("src/MyTCPDI.php");
-
-class Merger{
+/**
+ * Class Merger
+ * @package tcpdi_merger
+ */
+class Merger {
     private $tcpdi;
 
     private $files = array();
@@ -17,7 +19,11 @@ class Merger{
         $this->tcpdi = new MyTCPDI($showPagination); //Default page format params
     }
 
-    public function addRaw($pdf)
+    /**
+     * @param $pdf
+     * @throws Exception
+     */
+    public function addRaw($pdf): void
     {
         // Create temporary file
         $fname = $this->getTempFname();
@@ -27,8 +33,12 @@ class Merger{
         $this->addFromFile($fname, true);
     }
 
-
-    public function addFromFile($fname, $cleanup = false)
+    /**
+     * @param $fname
+     * @param bool $cleanup
+     * @throws Exception
+     */
+    public function addFromFile($fname, $cleanup = false): void
     {
         if (!is_file($fname) || !is_readable($fname)) {
             throw new Exception("'$fname' is not a valid file");
@@ -36,7 +46,10 @@ class Merger{
         $this->files[] = array($fname, $cleanup);
     }
 
-    public function merge()
+    /**
+     * @throws Exception
+     */
+    public function merge(): void
     {
         if (empty($this->files)) {
             throw new Exception("Unable to merge, no PDFs added");

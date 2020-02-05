@@ -50,7 +50,7 @@
 // include class for decoding filters
 #require_once(dirname(__FILE__).'/include/tcpdf_filters.php');
 
-namespace shihjay2\tcpdi_merger;
+namespace pdf_merger\tcpdi_merger;
 
 if (!defined ('PDF_TYPE_NULL'))
     define ('PDF_TYPE_NULL', 0);

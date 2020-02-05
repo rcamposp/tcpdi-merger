@@ -17,7 +17,7 @@
 //  limitations under the License.
 //
 
-namespace shihjay2\tcpdi_merger;
+namespace pdf_merger\tcpdi_merger;
 
 class fpdf_tpl extends FPDF {
     /**
