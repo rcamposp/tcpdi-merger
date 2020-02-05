@@ -2,9 +2,9 @@
 TCPDI-merger. Merge PDF files using the TCPDI library.
 
 ###Make it work!
-1. `composer require rcamposp/tcpdi-merger`
-2. Copy the example directory. 
-3. Run it! `php example/test-php.php`
+1. `composer require shihjay2/tcpdi-merger`
+2. Copy the example directory.
+3. Run it!
 
 ###Example code
 ```
@@ -12,8 +12,8 @@ TCPDI-merger. Merge PDF files using the TCPDI library.
 
     require 'vendor/autoload.php';
 
-    use rcamposp\tcpdi_merger\MyTCPDI;
-    use rcamposp\tcpdi_merger\Merger;            
+    use shihjay2\tcpdi_merger\MyTCPDI;
+    use shihjay2\tcpdi_merger\Merger;            
 
     $m = new Merger(true);
     $m->addFromFile("example/A.pdf");

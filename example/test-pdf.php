@@ -2,8 +2,8 @@
 
     require 'vendor/autoload.php';
 
-    use rcamposp\tcpdi_merger\MyTCPDI;
-    use rcamposp\tcpdi_merger\Merger;            
+    use shihjay2\tcpdi_merger\MyTCPDI;
+    use shihjay2\tcpdi_merger\Merger;
 
     $m = new Merger(true);
     $m->addFromFile("example/A.pdf");
