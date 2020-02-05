@@ -1,5 +1,5 @@
 {
-    "name": "shihjay2/tcpdi-merger",
+    "name": "pdf-merger/tcpdi-merger",
     "description": "PDF Importer that supports PDF versions 1.6+. https://github.com/shihjay2/tcpdi-merger",
     "keywords": ["pdf", "merge", "concatenate"],
     "homepage": "https://github.com/mateuszkargul/tcpdi-merger",
@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "mateuszkargul\\tcpdi_merger\\": "src/"
+            "pdf-merger\\tcpdi_merger\\": "src/"
         }
     },
     "require": {
